@@ -7,6 +7,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 $font-family-sans-serif: "Open Sans", sans-serif;
+$font-family-header: "Comic Sans MS", cursive, sans-serif;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -29,4 +30,55 @@ i.success {
 
 .fi-large {
   font-size: 2em;
+}
+
+.row {
+  background-color: #fff;
+}
+
+#right-side {
+  .panel {
+    background: lighten($body-bg, 50%);
+    border: 0px solid lighten($body-bg, 40%);
+    border-radius: 10px;
+  }
+  
+
+  ul.pagination li {
+    display: block;
+    float: left;
+  }
+  ul.pagination li {
+    a {
+      color: $primary-color !important;
+    }
+    
+    font-size: 1.5rem;
+    height: 1.7142857143rem;
+    margin-left: 0.3571428571rem;
+  }
+  .sidebar-search {
+    .row {
+      background: transparent !important;
+      padding: 1em 0 1em 0;
+    }
+  }
+  
+  h1,h2,h3,h4,h5,h6 {
+    font-family: $font-family-header;
+    line-height: 2em;
+    border-bottom: 1px solid $secondary-color;
+    &::first-letter {
+      font-family: $font-family-sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $body-bg;
+    }
+  }
+}
+
+.header {
+  text-align: right;
+  background-color: $secondary-color;
+  padding:0;
 }

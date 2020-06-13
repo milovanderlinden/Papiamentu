@@ -10,7 +10,6 @@
  *
  *= require jquery.ui.core
  *= require jquery.ui.theme
- *= require foundation_and_overrides
  *= require inline_forms
  *= require commontator/application
  *= require spelling_game
@@ -18,21 +17,10 @@
  @import 'foundation_and_overrides';
 
 
- #frontend .flash {
+#frontend .flash {
    margin-top: 0px;
- }
-
-#left-side {
-  border: 0px solid green;
 }
 
-#right-side {
-  border: 0px solid green;
-}
-
-#middle {
-  border: 0px solid red;
-}
 
 .section {
   margin-top: 1em;

@@ -75,50 +75,56 @@
 </div>
 
 <div id="right-side" class="columns small-12 medium-6 large-4 topper bordered">
-
-  <h3><%= I18n.t('views.shared.frontend.sidebar.information') %></h3>
-  <ul>
-    <li>
-      <div class='yes_no'>
-        <%= I18n.t('views.shared.frontend.sidebar.approved') %>
-          <% if @word.approved? %>
-            <i class="success fi-check"></i>
-          <% else %>
-            <i class="alert fi-alert"></i>
-          <% end %>
-      </div>
-    </li>
-    <li>
-      <div class='yes_no'>
-        <%= I18n.t('views.shared.frontend.sidebar.standardized') %>
-          <% if @word.standarized? %>
-            <i class="success fi-check"></i>
-            <%= time_ago_in_words(@word.attested_on) %> ago
-          <% else %>
-            <i class="alert fi-alert"></i>
-          <% end %>
-      </div>
-    </li>
-    <li>
-      <div class='yes_no'>
-        <%= I18n.t('views.shared.frontend.sidebar.views') %>: <%= @word.views %>
-      </div>
-    </li>
-  </ul>
-  <h3>Dutch Caribbean Platform (DCDP)</h3>
-  <ul>
-    <li>
-      Pa mira e palabra aki usá den konteksto den e biblioteka digital (por ehèmpel den buki i artíkulo), klek riba e siguiente konekshon:
-      <%= link_to "#{@word.name}", "http://dcdp.uoc.cw/results/?text=#{@word.name}", target: :_blank %>
-    </li>
-  </ul>
-  <h3>Tradukshon Majstro</h3>
-  <ul>
-    <li>
-      <%= link_to 'tradukshon Majstro', "https://www.majstro.com/Web/Majstro/bdict.php?gebrTaal=dut&bronTaal=pap&doelTaal=dut&teVertalen=#{@word.name}", target: :_blank %>
-    </li>
-  </ul>
-  <h3>anterior/siguiente/buska</h3>
+  <div class="panel">
+    <h3><%= I18n.t('views.shared.frontend.sidebar.information') %></h3>
+    <ul>
+      <li>
+        <div class='yes_no'>
+          <%= I18n.t('views.shared.frontend.sidebar.approved') %>
+            <% if @word.approved? %>
+              <i class="success fi-check"></i>
+            <% else %>
+              <i class="alert fi-alert"></i>
+            <% end %>
+        </div>
+      </li>
+      <li>
+        <div class='yes_no'>
+          <%= I18n.t('views.shared.frontend.sidebar.standardized') %>
+            <% if @word.standarized? %>
+              <i class="success fi-check"></i>
+              <%= time_ago_in_words(@word.attested_on) %> ago
+            <% else %>
+              <i class="alert fi-alert"></i>
+            <% end %>
+        </div>
+      </li>
+      <li>
+        <div class='yes_no'>
+          <%= I18n.t('views.shared.frontend.sidebar.views') %>: <%= @word.views %>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3>Dutch Caribbean Platform (DCDP)</h3>
+    <ul>
+      <li>
+        Pa mira e palabra aki usá den konteksto den e biblioteka digital (por ehèmpel den buki i artíkulo), klek riba e siguiente konekshon:
+        <%= link_to "#{@word.name}", "http://dcdp.uoc.cw/results/?text=#{@word.name}", target: :_blank %>
+      </li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3>Tradukshon Majstro</h3>
+    <ul>
+      <li>
+        <%= link_to 'tradukshon Majstro', "https://www.majstro.com/Web/Majstro/bdict.php?gebrTaal=dut&bronTaal=pap&doelTaal=dut&teVertalen=#{@word.name}", target: :_blank %>
+      </li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3>anterior/siguiente/buska</h3>
     <ul>
       <li>
         anterior: <%= link_to_word(@word.previous_words.first) %>
@@ -126,10 +132,12 @@
       <li>
         siguiente: <%= link_to_word(@word.next_words.first) %>
       </li>
-      <li>
+      <li class="sidebar-search">
         <%= render "search_form" %>
       </li>
     </ul>
+  </div>
+  <div class="panel">
 
   <% unless @word.approved? %>
     <h3>Vota</h3>
@@ -140,50 +148,54 @@
     <% end %>
     pro: <%= @word.votes_for %><br />
     kontra: <%= @word.votes_against %>
-  <% end %>
-
-  <h3><%= I18n.t('views.shared.frontend.sidebar.linguistic') %></h3>
-  <ul>
-    <li>
-      <%= I18n.t('views.shared.frontend.sidebar.word_types') %>: <%= @word.wordtypes.map(&:name).to_sentence %>
-    </li>
-    <li>
-      <div class='yes_no'>
-        <%= I18n.t('views.shared.frontend.sidebar.countable') %>
-          <% if @word.countable? %>
-            <i class="success fi-check"></i>
-          <% else %>
-            <i class="alert fi-alert"></i>
-          <% end %>
-      </div>
-    </li>
-    <li>
-      <div class='yes_no'>
-        <%= I18n.t('views.shared.frontend.sidebar.specific') %>
-          <% if @word.specific? %>
-            <i class="success fi-check"></i>
-          <% else %>
-            <i class="alert fi-alert"></i>
-          <% end %>
-      </div>
-    </li>
-  </ul>
-
-  <h3><%= I18n.t('views.shared.frontend.sidebar.recent_words') %></h3>
-  <ul>
-    <% Word.recently_updated.each do |word| %>
-      <li>
-        <%= link_to word.word_max_length(20), "/palabra/#{word.name}", :title => word.name  %>
-      </li>
     <% end %>
-  </ul>
-
-  <h3><%= I18n.t('views.shared.frontend.sidebar.most_viewed_words') %></h3>
-  <ul>
-    <% Word.most_viewed.each do |word| %>
+  </div>
+  <div class="panel">
+    <h3><%= I18n.t('views.shared.frontend.sidebar.linguistic') %></h3>
+    <ul>
       <li>
-        <%= link_to word.word_max_length(20), "/palabra/#{word.name}", :title => word.name  %>
+        <%= I18n.t('views.shared.frontend.sidebar.word_types') %>: <%= @word.wordtypes.map(&:name).to_sentence %>
       </li>
-    <% end %>
-  </ul>
+      <li>
+        <div class='yes_no'>
+          <%= I18n.t('views.shared.frontend.sidebar.countable') %>
+            <% if @word.countable? %>
+              <i class="success fi-check"></i>
+            <% else %>
+              <i class="alert fi-alert"></i>
+            <% end %>
+        </div>
+      </li>
+      <li>
+        <div class='yes_no'>
+          <%= I18n.t('views.shared.frontend.sidebar.specific') %>
+            <% if @word.specific? %>
+              <i class="success fi-check"></i>
+            <% else %>
+              <i class="alert fi-alert"></i>
+            <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3><%= I18n.t('views.shared.frontend.sidebar.recent_words') %></h3>
+    <ul>
+      <% Word.recently_updated.each do |word| %>
+        <li>
+          <%= link_to word.word_max_length(20), "/palabra/#{word.name}", :title => word.name  %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3><%= I18n.t('views.shared.frontend.sidebar.most_viewed_words') %></h3>
+    <ul>
+      <% Word.most_viewed.each do |word| %>
+        <li>
+          <%= link_to word.word_max_length(20), "/palabra/#{word.name}", :title => word.name  %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

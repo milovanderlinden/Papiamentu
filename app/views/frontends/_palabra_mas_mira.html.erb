@@ -5,8 +5,10 @@
       <span><%= word.views %></span>
     </li>
   <% end %>
-  <li style="display:flex;justify-content: space-between;">
-    <%= link_to content_tag(:i, nil, :class => "fi-large fi-arrow-left", :alt => I18n.t("views.shared.buttons.previous"), :title => I18n.t("views.shared.buttons.previous") ),
+</ul>
+<ul class="pagination" style="display:flex;justify-content: space-between;">
+  <li class="arrow">
+  <%= link_to content_tag(:span, raw("&laquo;"), :alt => I18n.t("views.shared.buttons.previous"), :title => I18n.t("views.shared.buttons.previous") ),
       { update: "palabra_mas_mira",
         action: "_palabra_mas_mira",
         palabra_mas_mira_limit: @palabra_mas_mira_limit,
@@ -15,8 +17,9 @@
         locale: I18n.locale
       },
       remote: true
-    %>
-    <%= link_to content_tag(:i, nil, :class => "fi-large fi-arrow-right", :alt => I18n.t("views.shared.buttons.next"), :title => I18n.t("views.shared.buttons.next") ),
+  %>
+  <li class="arrow">
+   <%= link_to content_tag(:span, raw("&raquo;"), :alt => I18n.t("views.shared.buttons.next"), :title => I18n.t("views.shared.buttons.next") ),
         { update: "palabra_mas_mira",
           action: "_palabra_mas_mira",
           palabra_mas_mira_limit: @palabra_mas_mira_limit,
