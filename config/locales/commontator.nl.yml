@@ -64,7 +64,7 @@ nl:
         not_deleted: "E komentario aki no wòrdu kitá."
         update: "E komentario no por a wòrdu adaptá pasobra:"
       status:
-        created_at: "Krea riba %{created_at}."
+        created_at: "Gemaakt op %{created_at}."
         deleted_by: "Komentario kitá pa %{deleter_name}."
         updated_at: "Último adaptá pa %{editor_name} on %{updated_at}."
     email:

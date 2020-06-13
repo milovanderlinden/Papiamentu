@@ -10,7 +10,7 @@ pap-CW:
       restore: restore
     devise:
       title_for_devise: Banki do Palabra
-      welcome: Banko di Palabra
+      welcome: Bon Biní
       passwords:
         forgot_your_password: Forgot Your Password?
         change_your_password: Change your password, if you want!

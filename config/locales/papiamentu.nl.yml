@@ -1,39 +1,39 @@
-pap-CW:
+nl:
   word:
-    updated_at: "%{time} pasá"
+    updated_at: "%{time} geleden"
   views:
     shared:
       buttons:
-        search: buska
-        previous: atras
-        next: dilanti
+        search: zoek
+        previous: vorige
+        next: volgende
       flash:
       frontend:
-        word_of_the_day: Palabra di dia
-        word_search: Buska un palabra
-        check_text_for_missing: chèk un teksto pa missing palabra
-        maximum_upload_size: maksimo 1 mega bait
+        word_of_the_day: Woord van de dag
+        word_search: Zoek een woord
+        check_text_for_missing: controleer een tekst voor ontbrekende woorden
+        maximum_upload_size: maximaal 1 megabyte
         header:
         footer:
           back_to_home: bai bèk na página inisio
           disclaimer: no por derivá ningun derechi di uzo for di e wèpsait aki
           logout: finalisá seshon
         sidebar:
-          welcome: Bon Biní
-          important_links: Lenk importante
-          glossaries: Glosario
-          information: Informashon
-          recent_words: Palabra mas resien
-          most_viewed_words: Palabra mas mirá
-          word_types: tipo di palabra
-          linguistic: Lingwístiko
-          countable: kontabel
-          specific: spesífiko
-          approved: aprobá
-          standardized: standarisá
-          views: views
+          welcome: Welkom
+          important_links: Links
+          glossaries: Woordenlijsten
+          information: Informatie
+          recent_words: Recent bekeken
+          most_viewed_words: Meest bekeken
+          word_types: woordtype
+          linguistic: Taalkundig
+          countable: telbaar
+          specific: specifiek
+          approved: goedgekeurd
+          standardized: gestandaardiseerd
+          views: weergaven
       state:
-        you_have_access: U heeft nu toegang tot de Banko di Palabra!
+        you_have_access: U heeft nu toegang tot het woordenboek!
         you_can_login: Vanaf nu kunt u op deze site inloggen met uw emailadres en uw wachtwoord.
         you_have_changed_password: U heeft uw wachtwoord gewijzigd!
         you_can_login_with_new_password: Vanaf nu kunt u op deze site inloggen met uw emailadres en uw nieuwe wachtwoord.
@@ -41,7 +41,7 @@ pap-CW:
     views:
       banko_di_palabra: Banko di Palabra
       thanks_for_joining: Thanks for joining and have a great day!
-      ago: pasá
+      ago: geleden
       there_is_a_new_word_created: A kaba di krea e palabra
       please_visit_the_link_to_this_word: Por fabor bishitá %{link} pa wak e!
       the_word_has_views: 'E palabra: %{word} tin %{views} now!'

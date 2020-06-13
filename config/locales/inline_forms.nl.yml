@@ -1,35 +1,39 @@
 nl:
   inline_forms:
     general:
-      application_title: Application Title
-      title_for_devise: Title for Devise
-      welcome_for_devise: Welcome for Devise
+      application_title: Woordenboek
     view:
       close: sluiten
-      add_new: Maak een nieuw %{model}
-      undo: terughalen
-      trash: weggooien
-      restore: restore
+      add_new: maak een nieuw %{model}
+      undo: ongedaan maken
+      trash: prullenbak
+      restore: herstel
     devise:
-      send_instructions: stuur instructies
-      sign_up: inschrijven
-      login_with_email_and_password: aanmelden door email-adres en wachtwoord in te voeren.
+      title_for_devise: Woordenboek
+      welcome: Welkom
+      passwords:
+        forgot_your_password: Forgot Your Password?
+        change_your_password: Change your password, if you want!
+        send_me_instructions: send instuctions
+        change_my_password: change password
+      send_instructions: send instructions
+      sign_up: registreren
+      login_with_email_and_password: aanmelden met email en wachtwoord
       sign_in: aanmelden
       links:
-        no_unlock_instructions: geen instructies ontvangen om blokkade op te heffen?
-        sign_up: inschrijven
+        no_unlock_instructions: geen aanmeld instructie ontvangen?
+        sign_up: registreren
         sign_in: aanmelden
-        forgot_password: wachtwoord vergeten?
-        sign_in_with: aanmelden via %{provider}
+        forgot_password: forgot password?
+        sign_in_with: aanmelden met %{provider}
         no_instructions: geen instructies ontvangen?
-      signup_with_email_name_and_password: inschrijven door naam, email adres en wachtwoord (twee keer) in te voeren.
-      provide_email_and_we_send_instructions: geef ons uw email adres, dan sturen wij u instructies
-  succes: het ding is aangemaakt.
+      signup_with_email_name_and_password: sign up with email name and password
+      provide_email_and_we_send_instructions: provide your email and we will send instructions
+  succes: succes.
   activerecord:
     models:
       language: taal
     attributes:
       client:
-        first_name: voornaam
-        last_name: achternaam
-  application_name: naam van de applicatie
+        first_name: Voornaam
+        last_name: Achternaam
