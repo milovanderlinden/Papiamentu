@@ -10,7 +10,7 @@
 
 .header {
   text-align: right;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   padding:0;
 }
 
@@ -312,7 +312,7 @@ ul {
     float: left;
     min-width: 60px;
     text-align: right;
-    font-family: monospace;
+    font-family: $font-family-monospace;
 }
 
 
@@ -348,10 +348,10 @@ ul {
 }
 
 
-#left-side, #right-side {
+#left-side, #right-side, #middle {
   padding: 1.5em;
 }
 
-#left-side, #right-side {
-  padding-top: 3em;
+#left-side, #right-side, #middle {
+  padding-top: 1em;
 }

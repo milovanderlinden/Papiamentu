@@ -1,14 +1,15 @@
 @import 'foundation/functions';
-$secondary-color: #f9e814 !default;   // bondi-blue
-$primary-color: #002b7f !default; // white-lilac
-$body-bg: #ddd; //lighten($secondary-color, 10%);
+$secondary-color: #dee512 !default;   // bondi-blue
+$primary-color: #008CBA !default; // white-lilac
+$body-bg: #885381; //lighten($secondary-color, 10%);
 $include-html-classes: true;
 $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 $font-family-sans-serif: "Open Sans", sans-serif;
-  // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-  // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
 $base-font-size: 14px;
 $rem-base: $base-font-size;
 $row-width: rem-calc(1200);
@@ -17,4 +18,15 @@ body {
   background-color: $body-bg !important;
   background-image: image-url("background.png");
   background-position:center;
+}
+
+i.alert {
+  color: $alert-color;
+}
+i.success {
+  color: $success-color;
+}
+
+.fi-large {
+  font-size: 2em;
 }

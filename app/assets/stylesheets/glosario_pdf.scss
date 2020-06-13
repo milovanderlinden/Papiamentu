@@ -70,7 +70,8 @@ legend{color:#000;}
   }
 
   h1,h2,h3,h4,h5,h6 {
-    font-family: "Dosis";
+    font-family: $font-family-sans-serif;
+    text-transform: capitalize;
   }
 
   ul, ol, dl {

@@ -15,7 +15,9 @@
  *= require commontator/application
  *= require spelling_game
  */
- 
+ @import 'foundation_and_overrides';
+
+
  #frontend .flash {
    margin-top: 0px;
  }
@@ -56,13 +58,6 @@ ul {
 .source a {
   text-decoration: none;
   color: inherit;
-}
-
-.word_section {
-  border: 0px solid blue;
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-  font-size: 200%;
 }
 
 .wikipedia_section {
