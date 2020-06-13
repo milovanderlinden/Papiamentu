@@ -3,6 +3,10 @@ pap-CW:
     shared:
       flash:
       frontend:
+        word_of_the_day: Palabra di dia
+        word_search: Buska un palabra
+        check_text_for_missing: chèk un teksto pa missing palabra
+        maximum_upload_size: maksimo 1 mega bait
         header:
         footer:
           back_to_home: bai bèk na página inisio

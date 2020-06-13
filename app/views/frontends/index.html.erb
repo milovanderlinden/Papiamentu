@@ -1,13 +1,13 @@
 <%= render 'shared/state' %>
 <div class="columns small-12 medium-8 large-8 topper" id="left-side">
-  <h2>Palabra di dia: <%= link_to_word Word.buki_di_oro.random %></h2>
-  <h3>Buska un palabra</h3>
+  <h2><%= I18n.t("views.shared.frontend.word_of_the_day") %>:<%= link_to_word Word.buki_di_oro.random %></h2>
+  <h3><%= I18n.t("views.shared.frontend.word_search") %></h3>
   <p>
     <%= render 'search_form' %>
   </p>
-  <!-- <h2>chèk un teksto pa missing palabra</h2>
+  <!-- <h2><%= I18n.t("views.shared.frontend.check_text_for_missing") %></h2>
   <p>
-    maksimo 1 mega bait
+    <%= I18n.t("views.shared.frontend.maximum_upload_size") %>
     <%= render 'search_form_text' %>
   </p> -->
 </div>
