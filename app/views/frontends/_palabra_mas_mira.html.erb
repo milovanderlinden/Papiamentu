@@ -6,12 +6,13 @@
     </li>
   <% end %>
   <li style="display:flex;justify-content: space-between;">
-  <%= link_to content_tag(:i, nil, :class => "fi-large fi-arrow-left", :alt => I18n.t("views.shared.buttons.previous"), :title => I18n.t("views.shared.buttons.previous") ),
+    <%= link_to content_tag(:i, nil, :class => "fi-large fi-arrow-left", :alt => I18n.t("views.shared.buttons.previous"), :title => I18n.t("views.shared.buttons.previous") ),
       { update: "palabra_mas_mira",
         action: "_palabra_mas_mira",
         palabra_mas_mira_limit: @palabra_mas_mira_limit,
         palabra_mas_mira_offset: @palabra_mas_mira_offset,
         direction: 'back',
+        locale: I18n.locale
       },
       remote: true
     %>
@@ -21,8 +22,9 @@
           palabra_mas_mira_limit: @palabra_mas_mira_limit,
           palabra_mas_mira_offset: @palabra_mas_mira_offset,
           direction: 'forward',
+          locale: I18n.locale
         },
         remote: true
-      %>
-      </li>
+    %>
+  </li>
 </ul>

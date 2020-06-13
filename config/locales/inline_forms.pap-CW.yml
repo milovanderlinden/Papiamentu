@@ -32,7 +32,7 @@ pap-CW:
   succes: success.
   activerecord:
     models:
-      language: language
+      language: idioma
     attributes:
       client:
         first_name: first name
