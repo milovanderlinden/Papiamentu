@@ -1,10 +1,12 @@
 <ul>
   <% Word.most_viewed(@palabra_mas_mira_limit, @palabra_mas_mira_offset).each do |word| %>
-    <li>
-      <%= word.views %>: <%= link_to_word word %>
+    <li style="display:flex;justify-content: space-between;">
+      <span><%= link_to_word word %>:</span>
+      <span><%= word.views %></span>
     </li>
   <% end %>
-  <%= link_to image_tag("back.png", :size => "24x24", :border => 0, :alt => "Atras", :title => "Atras" ),
+  <li style="display:flex;justify-content: space-between;">
+  <%= link_to content_tag(:i, nil, :class => "fi-large fi-arrow-left", :alt => I18n.t("views.shared.buttons.previous"), :title => I18n.t("views.shared.buttons.previous") ),
       { update: "palabra_mas_mira",
         action: "_palabra_mas_mira",
         palabra_mas_mira_limit: @palabra_mas_mira_limit,
@@ -13,7 +15,7 @@
       },
       remote: true
     %>
-    <%= link_to image_tag("forward.png", :size => "24x24", :border => 0, :alt => "Dilanti", :title => "Dilanti" ),
+    <%= link_to content_tag(:i, nil, :class => "fi-large fi-arrow-right", :alt => I18n.t("views.shared.buttons.next"), :title => I18n.t("views.shared.buttons.next") ),
         { update: "palabra_mas_mira",
           action: "_palabra_mas_mira",
           palabra_mas_mira_limit: @palabra_mas_mira_limit,
@@ -22,4 +24,5 @@
         },
         remote: true
       %>
+      </li>
 </ul>

@@ -38,7 +38,7 @@
                 <%= text_field_tag :search,  params[:search], :placeholder => 'buska palabra...', :id => 'input_search' %>
               </div>
               <div class="large-2 small-2 columns">
-                <%= submit_tag 'buska', :class => "button expand inline_forms_model_top_bar_buttons" %>
+                <%= submit_tag I18n.t('views.shared.buttons.search'), :class => "button expand inline_forms_model_top_bar_buttons" %>
               </div>
             </div>
           <% end %>

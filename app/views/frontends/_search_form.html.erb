@@ -4,7 +4,7 @@
       <%= text_field_tag :word, nil, placeholder: I18n.t("views.shared.frontend.word_search") %>
     </div>
     <div class="column large-6 medium-6 small-3 text-left">
-      <%= submit_tag 'buska', class: 'button search_form_button' %>
+      <%= submit_tag I18n.t('views.shared.buttons.search'), class: 'button search_form_button' %>
     </div>
   </div>
 <% end %>

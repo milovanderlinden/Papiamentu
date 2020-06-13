@@ -4,12 +4,13 @@
 </div>
 <div id="middle" class="columns small-12 medium-6 large-5 topper  bordered">
   <div class='word_section section'>
-      <%= @word.name %>
+      <h3><%= @word.name %>
       <% if @word.approved? %>
-        <%= image_tag 'yes.png', size: '32x32' %>
+        <i class="success fi-check"></i>
       <% else %>
-        <%= image_tag 'no.png',  size: '32x32'  %>
+        <i class="alert fi-alert"></i>
       <% end %>
+      </h3>
   </div>
   <% wiki = Wikipedia.find(@word.name) %>
   <% if wiki.main_image_url || wiki.summary %>
@@ -74,32 +75,33 @@
 </div>
 
 <div id="right-side" class="columns small-12 medium-6 large-4 topper bordered">
-  <h3>informashon</h3>
+
+  <h3><%= I18n.t('views.shared.frontend.sidebar.information') %></h3>
   <ul>
     <li>
       <div class='yes_no'>
-        aprobá
+        <%= I18n.t('views.shared.frontend.sidebar.approved') %>
           <% if @word.approved? %>
-            <%= image_tag 'yes.png' %>
+            <i class="success fi-check"></i>
           <% else %>
-            <%= image_tag 'no.png'  %>
+            <i class="alert fi-alert"></i>
           <% end %>
       </div>
     </li>
     <li>
       <div class='yes_no'>
-        standarisá
+        <%= I18n.t('views.shared.frontend.sidebar.standardized') %>
           <% if @word.standarized? %>
-            <%= image_tag 'yes.png' %>
+            <i class="success fi-check"></i>
             <%= time_ago_in_words(@word.attested_on) %> ago
           <% else %>
-            <%= image_tag 'no.png' %>
+            <i class="alert fi-alert"></i>
           <% end %>
       </div>
     </li>
     <li>
       <div class='yes_no'>
-        views: <%= @word.views %>
+        <%= I18n.t('views.shared.frontend.sidebar.views') %>: <%= @word.views %>
       </div>
     </li>
   </ul>
@@ -140,34 +142,34 @@
     kontra: <%= @word.votes_against %>
   <% end %>
 
-  <h3>lingwístiko</h3>
+  <h3><%= I18n.t('views.shared.frontend.sidebar.linguistic') %></h3>
   <ul>
     <li>
-      tipo di palabra: <%= @word.wordtypes.map(&:name).to_sentence %>
+      <%= I18n.t('views.shared.frontend.sidebar.word_types') %>: <%= @word.wordtypes.map(&:name).to_sentence %>
     </li>
     <li>
       <div class='yes_no'>
-        kontabel
+        <%= I18n.t('views.shared.frontend.sidebar.countable') %>
           <% if @word.countable? %>
-            <%= image_tag 'yes.png' %>
+            <i class="success fi-check"></i>
           <% else %>
-            <%= image_tag 'no.png'  %>
+            <i class="alert fi-alert"></i>
           <% end %>
       </div>
     </li>
     <li>
       <div class='yes_no'>
-        spesífiko
+        <%= I18n.t('views.shared.frontend.sidebar.specific') %>
           <% if @word.specific? %>
-            <%= image_tag 'yes.png' %>
+            <i class="success fi-check"></i>
           <% else %>
-            <%= image_tag 'no.png'  %>
+            <i class="alert fi-alert"></i>
           <% end %>
       </div>
     </li>
   </ul>
 
-  <h3>palabra mas resien</h3>
+  <h3><%= I18n.t('views.shared.frontend.sidebar.recent_words') %></h3>
   <ul>
     <% Word.recently_updated.each do |word| %>
       <li>
@@ -176,7 +178,7 @@
     <% end %>
   </ul>
 
-  <h3>palabra mas mirá</h3>
+  <h3><%= I18n.t('views.shared.frontend.sidebar.most_viewed_words') %></h3>
   <ul>
     <% Word.most_viewed.each do |word| %>
       <li>
