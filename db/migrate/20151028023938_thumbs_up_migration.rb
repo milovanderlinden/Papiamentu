@@ -1,4 +1,4 @@
-class ThumbsUpMigration < ActiveRecord::Migration
+class ThumbsUpMigration < ActiveRecord::Migration[5.0]
   def self.up
     create_table :votes, :force => true do |t|
 

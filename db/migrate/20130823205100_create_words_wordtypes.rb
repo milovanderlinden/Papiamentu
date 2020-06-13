@@ -1,4 +1,4 @@
-class CreateWordsWordtypes < ActiveRecord::Migration
+class CreateWordsWordtypes < ActiveRecord::Migration[5.0]
 
   def self.up
   create_table "words_wordtypes", :id => false, :force => true do |t|

@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis:400,400italic);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic);
+@import 'foundation_and_overrides';
 
 
 /* Reset CSS. http://yui.yahooapis.com/3.2.0/build/cssreset/reset-min.css  */
@@ -20,7 +19,7 @@ legend{color:#000;}
 .pbi_avoid { page-break-inside:avoid !important; }
 
 #glossary_pdf_header {
-  background-color: #dee512;
+  background-color: $secondary-color;
   padding: 10px;
   text-align: right;
   margin-bottom: 25rem;

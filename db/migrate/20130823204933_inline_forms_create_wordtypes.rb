@@ -1,7 +1,7 @@
-class InlineFormsCreateWordtypes < ActiveRecord::Migration
+class InlineFormsCreateWordtypes < ActiveRecord::Migration[5.0]
 
   def self.up
-    create_table :wordtypes, :id => true do |t|
+    create_table :wordtypes do |t|
       t.string :name 
       t.string :title_nl 
       t.string :title_en 

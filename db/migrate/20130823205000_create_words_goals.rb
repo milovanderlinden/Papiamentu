@@ -1,4 +1,4 @@
-class CreateWordsGoals < ActiveRecord::Migration
+class CreateWordsGoals < ActiveRecord::Migration[5.0]
 
   def self.up
  create_table "goals_words", :id => false, :force => true do |t|

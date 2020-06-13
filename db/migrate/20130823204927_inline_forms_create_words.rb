@@ -1,7 +1,11 @@
-class InlineFormsCreateWords < ActiveRecord::Migration
+CREATE_TIMESTAMP = 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP'
+UPDATE_TIMESTAMP = 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'
+
+class InlineFormsCreateWords < ActiveRecord::Migration[5.0]
 
   def self.up
-    create_table :words, :id => true do |t|
+    
+    create_table :words do |t|
       t.string :name 
       t.text :synonym 
       t.belongs_to :source, :default => 1
@@ -16,8 +20,9 @@ class InlineFormsCreateWords < ActiveRecord::Migration
       t.string :tr_en 
       t.string :tr_es 
       t.string :tr_pap_cw 
-      t.string :tr_pap_aw 
-      t.timestamps
+      t.string :tr_pap_aw
+      t.column :created_at, CREATE_TIMESTAMP
+      t.column :updated_at, UPDATE_TIMESTAMP
     end
   end
 

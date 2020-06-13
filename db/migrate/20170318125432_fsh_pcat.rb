@@ -1,7 +1,7 @@
-class FshPcat < ActiveRecord::Migration
+class FshPcat < ActiveRecord::Migration[5.0]
   def up
     say_with_time "Restore fshp_categories..." do
-      File.open("fshp.csv", "r").each_line do |line|
+      File.open("stuff/fshp.csv", "r").each_line do |line|
         line = line.strip
         word, cat = line.split ';'
         db_word = Word.where(name: word)

@@ -1,4 +1,4 @@
-class InlineFormsCreateViewForTranslations < ActiveRecord::Migration
+class InlineFormsCreateViewForTranslations < ActiveRecord::Migration[5.0]
 
   def self.up
     execute 'CREATE VIEW translations

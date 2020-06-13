@@ -1,4 +1,4 @@
-class CreateFshpCategoriesWords < ActiveRecord::Migration
+class CreateFshpCategoriesWords < ActiveRecord::Migration[5.0]
 
   def self.up
     create_table "fshp_categories_words", :id => false, :force => true do |t|

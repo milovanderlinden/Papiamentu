@@ -19,7 +19,7 @@ nbproject
 public/uploads
 .project
 
-
+vendor/ruby/
 app/old
 
 # Ignore application configuration

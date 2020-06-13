@@ -1,7 +1,7 @@
-class InlineFormsCreateGoals < ActiveRecord::Migration
+class InlineFormsCreateGoals < ActiveRecord::Migration[5.0]
 
   def self.up
-    create_table :goals, :id => true do |t|
+    create_table :goals do |t|
       t.string :name 
       t.string :title_nl 
       t.string :title_en 

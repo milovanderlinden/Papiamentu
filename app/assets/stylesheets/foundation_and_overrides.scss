@@ -1,5 +1,7 @@
 @import 'foundation/functions';
-
+$primary-color: #f9e814 !default;   // bondi-blue
+$secondary-color: #002b7f !default; // white-lilac
+$body-bg: #ddd; //lighten($secondary-color, 10%);
 $include-html-classes: true;
 $include-html-global-classes: $include-html-classes;
 
@@ -11,3 +13,8 @@ $base-font-size: 14px;
 $rem-base: $base-font-size;
 $row-width: rem-calc(1200);
 @import 'foundation';
+body {
+  background-color: $body-bg !important;
+  background-image: image-url("background.png");
+  background-position:center;
+}

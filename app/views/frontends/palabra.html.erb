@@ -54,7 +54,9 @@
     <%= content_tag(:p, "E palabra aki ta parti di e siguiente glosarionan: #{@word.glossaries.map { |g| link_to_glossary g }.join(' ') }".html_safe ) unless @word.glossaries.empty? %>
   </div>
   <div class="yandex_section section">
-    <strong>Tradukshon di Yandex. Por ta no ta accuraat.</strong>
+    <% if ENV['YANDEX_API_KEY'] %>
+      <strong>Tradukshon di Yandex. Por ta no ta accuraat.</strong>
+    <% end %>
     <ul>
       <% @word.get_yandex_translations %>
       <% YANDEX_LANGUAGES.each do |language| %>
@@ -63,10 +65,11 @@
         </li>
       <% end %>
     </ul>
+    <% if ENV['YANDEX_API_KEY'] %>
     <div class="source">
       <%= link_to 'Powered by Yandex.Translate', 'https://translate.yandex.com', target: "_blank" %>
     </div>
-
+    <% end %>
   </div>
 </div>
 
@@ -128,7 +131,11 @@
 
   <% unless @word.approved? %>
     <h3>Vota</h3>
-    agregá pa: <%= @word.user.name %> (<%= time_ago_in_words(@word.created_at) %> pasá)
+    <% if not @word.user.nil? %>
+      agregá pa: <%= @word.user.name %> (<%= time_ago_in_words(@word.created_at) %> pasá)
+    <% else %>
+    agregá pa: anonymous (<%= time_ago_in_words(@word.created_at) %> pasá)
+    <% end %>
     pro: <%= @word.votes_for %><br />
     kontra: <%= @word.votes_against %>
   <% end %>

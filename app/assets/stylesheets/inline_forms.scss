@@ -1,15 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic);
 @import 'foundation-icons';
 @import 'themes/jquery.ui.sunny';
 @import 'jquery.ui.all';
 
 @import 'foundation_and_overrides';
-
-body {
-  background-color: #885381 !important;
-  background-image: image-url("background.png");
-  background-position: center;
-}
 
 .row {
   background-color: #fff;
@@ -17,7 +10,7 @@ body {
 
 .header {
   text-align: right;
-  background-color: #dee512;
+  background-color: $secondary-color;
   padding:0;
 }
 
@@ -241,10 +234,6 @@ ul {
     padding: 0.3em;
   }
 
-
-.column {
-    padding-right: 0 !important;
-}
 
 .top-bar input, .top-bar .button {
   top: 4px !important;

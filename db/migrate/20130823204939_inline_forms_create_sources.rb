@@ -1,7 +1,7 @@
-class InlineFormsCreateSources < ActiveRecord::Migration
+class InlineFormsCreateSources < ActiveRecord::Migration[5.0]
 
   def self.up
-    create_table :sources, :id => true do |t|
+    create_table :sources do |t|
       t.string :name 
       t.text :comment 
       t.timestamps
