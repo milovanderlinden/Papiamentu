@@ -13,6 +13,7 @@ pap-CW:
         buki_di_oro_text: Tekst volgens Buki di Oro
         countable: telbaar
         created_at: created
+        description: deskripshon
         description_nl: deskripshon (hul)
         description_pap_cw: deskripshon (pap)
         glossaries: E palabra aki ta den e siguiente glosarionan
@@ -24,6 +25,7 @@ pap-CW:
         header_spel_spel_group: Grupo di palabra pa Spèl-spèl
         header_splikashon: splikashon
         name: entrada
+        no_description: e palabra aki no tin deskripshon na papiamentu ahinda
         pictures: potrèt
         recordings: zonido
         school_language: idioma di skol
@@ -63,6 +65,9 @@ pap-CW:
     messages:
       presence: yena loke falta
       uniqueness: por aparesé un bia so
+  information:
+    wikipedia: Informashon di Wikipedia
+    yandex: Tradukshon di Yandex. Por ta no ta accuraat.
   inline_forms:
     devise:
       submit:
@@ -71,9 +76,11 @@ pap-CW:
       application_title: Application title
   inline_forms.devise.submit.change_password: ok
   links:
-    fpi: Fpi
-    korsou_habri: Korsou habri
-    spellchecker: Spellchecker
+    fpi: Fundashon pa Planifikashon di Idioma
+    korsou_habri: Kòrsou habrí
+    spellchecker: Spèlchèk pa Firefox
+    majstro: Tradukshon Majstro
+    dcdp: Dutch Caribbean Platform (DCDP)
   success: a añadí bo informashon
   views:
     shared:

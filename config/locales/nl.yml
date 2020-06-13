@@ -13,8 +13,9 @@ nl:
         buki_di_oro_text: Tekst volgens Buki di Oro
         countable: telbaar
         created_at: gemaakt
-        description_nl: deskripshon (hul)
-        description_pap_cw: deskripshon (pap)
+        description: beschrijving
+        description_nl: beschrijving (nederlands)
+        description_pap_cw: beschrijving (papiamentu)
         glossaries: E palabra aki ta den e siguiente glosarionan
         goals: aréa di edukashon
         header_fuente: fuente
@@ -23,20 +24,21 @@ nl:
         header_lema: lèma
         header_spel_spel_group: Grupo di palabra pa Spèl-spèl
         header_splikashon: splikashon
-        name: entrada
-        pictures: potrèt
+        name: naam
+        no_description: er is geen beschrijving aanwezig
+        pictures: afbeeldingen
         recordings: zonido
         school_language: idioma di skol
-        source: fuente
-        sources: fuente
+        source: bron
+        sources: bronnen
         specific: spesífiko
         spelling_groups: E palabra aki ta den e siguiente gruponan
-        synonym: sinonimo
-        tr_en: tradukshon (eng)
-        tr_nl: tradukshon (hul)
-        user: usadó
+        synonym: synoniem
+        tr_en: engelse vertaling
+        tr_nl: nederlandse vertaling
+        user: auteur
         variants: Variante ortográfiko
-        wordtypes: kategoria
+        wordtypes: categorie
     errors:
       models:
         word:
@@ -63,6 +65,9 @@ nl:
     messages:
       presence: yena loke falta
       uniqueness: por aparesé un bia so
+  information:
+    wikipedia: Wikipedia informatie
+    yandex: Vertaald met yandex (is mogelijk niet accuraat)
   inline_forms:
     devise:
       submit:
@@ -71,9 +76,11 @@ nl:
       application_title: Application title
   inline_forms.devise.submit.change_password: ok
   links:
-    fpi: Fpi
-    korsou_habri: Korsou habri
-    spellchecker: Spellchecker
+    fpi: Stichting Taal Curaçao (FPI)
+    korsou_habri: Open Curaçao
+    spellchecker: Spellingscontrole voor Firefox
+    majstro: Majstro vertaling
+    dcdp: Dutch Caribbean Platform (DCDP)
   success: a añadí bo informashon
   views:
     shared:

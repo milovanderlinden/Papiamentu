@@ -76,7 +76,15 @@ i.success {
     }
   }
 }
-
+.word_section {
+  h1,h2,h3,h4,h5,h6 {
+    line-height: 2em;
+    border-bottom: 1px solid $secondary-color;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
 .header {
   text-align: right;
   background-color: $secondary-color;

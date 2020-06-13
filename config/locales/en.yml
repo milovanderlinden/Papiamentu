@@ -13,8 +13,9 @@ en:
         buki_di_oro_text: Tekst volgens Buki di Oro
         countable: telbaar
         created_at: created
-        description_nl: deskripshon (hul)
-        description_pap_cw: deskripshon (pap)
+        description: description
+        description_nl: description (dutch)
+        description_pap_cw: description (papiamentu)
         glossaries: E palabra aki ta den e siguiente glosarionan
         goals: aréa di edukashon
         header_fuente: fuente
@@ -24,6 +25,7 @@ en:
         header_spel_spel_group: Grupo di palabra pa Spèl-spèl
         header_splikashon: splikashon
         name: entrada
+        no_description: no description present
         pictures: potrèt
         recordings: zonido
         school_language: school language
@@ -32,8 +34,8 @@ en:
         specific: spesífiko
         spelling_groups: E palabra aki ta den e siguiente gruponan
         synonym: sinonimo
-        tr_en: tradukshon (eng)
-        tr_nl: tradukshon (hul)
+        tr_en: English translation
+        tr_nl: Dutch translation
         user: usadó
         variants: Variante ortográfiko
         wordtypes: kategoria

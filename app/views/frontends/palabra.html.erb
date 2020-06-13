@@ -15,11 +15,13 @@
   <% wiki = Wikipedia.find(@word.name) %>
   <% if wiki.main_image_url || wiki.summary %>
     <div class="wikipedia_section section">
-      <strong>Informashon di Wikipedia.</strong>
+      <strong><%= I18n.t('information.wikipedia') %></strong>
       <ul>
         <li>
           <div class="wiki_image">
-            <%= image_tag wiki.main_image_url unless wiki.main_image_url.nil? %>
+            <%if wiki.main_image_url.present? %>
+              <%= image_tag(wiki.main_image_url) %>
+            <% end %>
           </div>
           <div class="wiki_summary">
             <%= wiki.summary %>
@@ -27,7 +29,7 @@
         </li>
       </ul>
       <div class="source">
-        Fuente: <%= link_to 'Wikipedia na Papiamentu', wiki.fullurl, target: "_blank" %>
+        <%= I18n.t('activerecord.attributes.word.source') %>: <%= link_to 'Wikipedia na Papiamentu', wiki.fullurl, target: "_blank" %>
       </div>
     </div>
   <% end %>
@@ -56,7 +58,7 @@
   </div>
   <div class="yandex_section section">
     <% if ENV['YANDEX_API_KEY'] %>
-      <strong>Tradukshon di Yandex. Por ta no ta accuraat.</strong>
+      <strong><%= I18n.t('information.yandex') %></strong>
     <% end %>
     <ul>
       <% @word.get_yandex_translations %>
@@ -107,7 +109,7 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>Dutch Caribbean Platform (DCDP)</h3>
+    <h3><%= I18n.t('links.dcdp') %></h3>
     <ul>
       <li>
         Pa mira e palabra aki usá den konteksto den e biblioteka digital (por ehèmpel den buki i artíkulo), klek riba e siguiente konekshon:
@@ -116,10 +118,10 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>Tradukshon Majstro</h3>
+    <h3><%= I18n.t('links.majstro') %></h3>
     <ul>
       <li>
-        <%= link_to 'tradukshon Majstro', "https://www.majstro.com/Web/Majstro/bdict.php?gebrTaal=dut&bronTaal=pap&doelTaal=dut&teVertalen=#{@word.name}", target: :_blank %>
+        <%= link_to I18n.t('links.majstro'), "https://www.majstro.com/Web/Majstro/bdict.php?gebrTaal=dut&bronTaal=pap&doelTaal=dut&teVertalen=#{@word.name}", target: :_blank %>
       </li>
     </ul>
   </div>

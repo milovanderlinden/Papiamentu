@@ -149,9 +149,9 @@ class Word < ApplicationRecord
 
   def description_pap_cw_nice
     if description_pap_cw.blank?
-      'deskripshon: e palabra aki no tin deskripshon na papiamentu ahinda'
+      I18n.t('activerecord.attributes.word.description') + ': ' + I18n.t('activerecord.attributes.word.no_description')
     else
-      "deskripshon: #{description_pap_cw}"
+      I18n.t('activerecord.attributes.word.description') + ": #{description_pap_cw}"
     end
   end
 
