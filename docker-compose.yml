@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - papiamentu
+    environment:
+      DATABASE_NAME: palabra
+      DATABASE_USER: palabra
+      DATABASE_PASSWORD: palabra
+      DATABASE_HOST: db
+  db:
+    image: mariadb:10.5
+    networks:
+      - papiamentu
+    ports:
+     - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: palabra
+      MYSQL_USER: palabra
+      MYSQL_PASSWORD: palabra
+
+networks:
+  papiamentu:
+    driver: bridge
